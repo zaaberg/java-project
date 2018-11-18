@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'JenkinsSlaveGroup'
+    } 
 
     stages {
         stage('Unit Tests') {
