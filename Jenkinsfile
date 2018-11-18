@@ -2,14 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Unit Tests') {
           steps {
-            sh 'ant'
+            sh 'ant -f test.xml -v'
+            junit 'reports/result.xml'
           }
         }
-        stage('Test') {
+        stage('Build') {
         steps {
-            echo 'reports/*.xml'
+            sh 'ant -f build.xml -v'
           }
         }
     }
