@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Deploy') {
         steps {
-            sh 'aws s3 cp /var/jenkins_home/workspace/java-pipeline/dist/rectangle-*.jar s3://seis665-assignment9-zaaberg/'
+            sh 'aws s3 cp /workspace/java-pipeline/dist/rectangle-*.jar s3://seis665-assignment9-zaaberg/'
           }
         }        
         stage('Report') {
