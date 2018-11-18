@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'JenkinsSlaveGroup'
+        label 'linux && swarm'
     } 
 
     stages {
