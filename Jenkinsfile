@@ -2,15 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage(‘Build’) {
+        stage('Build') {
           steps {
-            sh ‘ant’
+            sh 'ant'
           }
         }
-        stage(‘Test’) {
+        stage('Test') {
         steps {
-            junit ‘reports/*.xml’
-        }
+            junit 'reports/*.xml'
+          }
         }
     }
 }
